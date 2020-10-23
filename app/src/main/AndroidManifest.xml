@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Login_Activity"></activity>
+        <activity android:name=".BuiltInTaskModels_Activity"></activity>
+        <activity android:name=".SubmitTask_Activity" />
+        <activity android:name=".TaskSettings_Activity" />
+        <activity android:name=".EditTask_Activity" />
+        <activity android:name=".CheckEmployeeTasks_Activity" />
+        <activity android:name=".CreateTask_Activity" />
+        <activity android:name=".YourTasks_Activity" />
+        <activity android:name=".Login_Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
