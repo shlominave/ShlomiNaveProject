@@ -14,7 +14,7 @@ public class CheckEmployeeTasks_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_check_employee_tasks_);
     }
     public void SetTaskSettings(View view) {
-        Intent i=new Intent(this,MainActivity.class);
+        Intent i=new Intent(this,TaskSettings_Activity.class);
         startActivity(i);
     }
     // public void Homepage(View view) {
