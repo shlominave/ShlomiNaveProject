@@ -10,10 +10,11 @@
         android:id="@+id/tvcheckemployeetasks"
         android:layout_width="0dp"
         android:layout_height="47dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="52dp"
         android:text="Tasks returned to you by your employees/students"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,9 +22,18 @@
         android:id="@+id/buttonTaskSettings"
         android:layout_width="303dp"
         android:layout_height="60dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginBottom="72dp"
         android:onClick="SetTaskSettings"
         android:text="set new settings for resent task"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:id="@+id/ReturnedTasksList"
+        android:layout_width="352dp"
+        android:layout_height="409dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvcheckemployeetasks" />

@@ -10,18 +10,18 @@
         android:id="@+id/btnedit"
         android:layout_width="221dp"
         android:layout_height="64dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="68dp"
         android:onClick="EditTask"
         android:text="Edit your task"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvYourTasks" />
+        app:layout_constraintTop_toBottomOf="@+id/YourTasksGridView" />
 
     <Button
         android:id="@+id/btnsubmit"
         android:layout_width="221dp"
         android:layout_height="64dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="44dp"
         android:onClick="HandInTask"
         android:text="submit your task"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,4 +40,13 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <GridView
+        android:id="@+id/YourTasksGridView"
+        android:layout_width="356dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvYourTasks" />
 </androidx.constraintlayout.widget.ConstraintLayout>
