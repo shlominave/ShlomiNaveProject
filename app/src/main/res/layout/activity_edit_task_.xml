@@ -22,11 +22,20 @@
         android:id="@+id/button2"
         android:layout_width="278dp"
         android:layout_height="50dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginBottom="72dp"
         android:onClick="SetTaskSettings"
         android:text="set new settings"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:id="@+id/TasksToEditList"
+        android:layout_width="343dp"
+        android:layout_height="375dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
