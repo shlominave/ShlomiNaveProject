@@ -10,8 +10,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Login_Activity extends AppCompatActivity {
-EditText username;
-EditText email;
+ private  EditText username;
+ private  EditText email;
+ private EditText pass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,16 +20,21 @@ EditText email;
         setContentView(R.layout.activity_login_);
         username=findViewById(R.id.tvusername);
          email=findViewById(R.id.tvemail);
+        pass=findViewById(R.id.editTextTextPassword);
+
 
     }
     public void LoginToast(View v){
-         email.setText("hhhhpopklopp");
-        if(username.getText()==null || email.getText()==null) {
-           email.setText("HHHHIIOOO");
-            Toast.makeText(this,"enter email and/or password", Toast.LENGTH_SHORT).show();
-        }
+        if(username.getText().length()==0 || email.getText().length()==0 || pass.getText().length()==0)
+            Toast.makeText(this,"enter values to all areas",Toast.LENGTH_SHORT).show();
         else
-            Toast.makeText(this,"username:"+username.getText().toString()+",email:"+email.getText().toString(), Toast.LENGTH_SHORT);
+        Toast.makeText(this,"username:"+String.valueOf(username.getText())+",email:"+String.valueOf(email.getText()),Toast.LENGTH_SHORT).show();
+}
+public void reset(View v)
+{
+    username.setText("");
+    email.setText("");
+    pass.setText("");
 }
     public void Create_A_Task(View view) {
         Intent i = new Intent(this, CreateTask_Activity.class);
