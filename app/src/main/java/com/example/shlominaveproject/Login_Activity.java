@@ -32,7 +32,7 @@ public class Login_Activity extends AppCompatActivity {
 }
 public void reset(View v)
 {
-    username.setText(""); 
+    username.setText("");
     email.setText("");
     pass.setText("");
 }
