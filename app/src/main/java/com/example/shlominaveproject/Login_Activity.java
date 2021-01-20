@@ -25,10 +25,10 @@ public class Login_Activity extends AppCompatActivity {
 
     }
     public void LoginToast(View v){
-        if(username.getText().length()==0 || email.getText().length()==0 || pass.getText().length()==0)
-            Toast.makeText(this,"enter values to all areas",Toast.LENGTH_SHORT).show();
+        if(username.getText().length()==0 || email.getText().length()==0 || pass.getText().length()<8)
+            Toast.makeText(this,"enter values to all areas,password must have at least 8 chars",Toast.LENGTH_SHORT).show();
         else
-        Toast.makeText(this,"username:"+String.valueOf(username.getText())+",email:"+String.valueOf(email.getText()),Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"username:"+String.valueOf(username.getText())+",email:"+String.valueOf(email.getText())+",password:"+String.valueOf(pass.getText()),Toast.LENGTH_SHORT).show();
 }
 public void reset(View v)
 {

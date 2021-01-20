@@ -20,23 +20,30 @@ public class Register extends AppCompatActivity {
         pass=findViewById(R.id.editTextTextPassword);
     }
     public void RegisterToast(View v){
+
         if(username.getText().length()==0 || email.getText().length()==0 || pass.getText().length()==0)
             Toast.makeText(this,"enter values to all areas",Toast.LENGTH_SHORT).show();
+        else if (pass.length()<8)
+        {
+            Toast.makeText(this,"password must be at least 8 chars",Toast.LENGTH_SHORT).show();
+        }
         else
         if(shtrudelcountandplace(email.getText().toString())==-1)
             Toast.makeText(this,"@ cannot be at the beginning of your email",Toast.LENGTH_SHORT).show();
         else
         if(shtrudelcountandplace(email.getText().toString())!=1)
-            Toast.makeText(this,"@ must appear excatly once",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"@ must appear exactly once",Toast.LENGTH_SHORT).show();
 
 
     }
     public int shtrudelcountandplace(String st) {
 
-        if (st.indexOf('@') == 0)
+        if (st.indexOf('@') ==0)
             return -1;
-        else if (st.lastIndexOf('@') != st.indexOf('@'))
+        else if (st.lastIndexOf('@') != st.indexOf('@') ||st.indexOf('@')==-1)
             return 0;
         else return 1;
     }
+
+    
 }
