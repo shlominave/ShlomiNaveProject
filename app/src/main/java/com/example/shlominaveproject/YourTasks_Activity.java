@@ -18,8 +18,8 @@ public class YourTasks_Activity extends AppCompatActivity {
         Intent i=new Intent(this,EditTask_Activity.class);
         startActivity(i);
     }
-    public void HandInTask(View view) {
-        Intent i=new Intent(this,SubmitTask_Activity.class);
+    public void Createnewtask(View view) {
+        Intent i=new Intent(this,CreateTask_Activity.class);
         startActivity(i);
     }
 // public void Homepage(View view) {

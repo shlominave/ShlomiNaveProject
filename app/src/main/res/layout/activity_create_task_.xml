@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".CreateTask_Activity">
 
+    <Button
+        android:id="@+id/btnseetasks"
+        android:layout_width="268dp"
+        android:layout_height="45dp"
+        android:onClick="BuiltInTaskModels"
+        android:text="I would like to see my existing tasks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="650dp" />
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="0dp"
@@ -21,10 +32,11 @@
         android:id="@+id/btnsettings"
         android:layout_width="268dp"
         android:layout_height="45dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="16dp"
         android:onClick="SetTaskSettings"
         android:text="set setting for your new task"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -32,10 +44,10 @@
         android:id="@+id/btntaskmodels"
         android:layout_width="268dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="16dp"
         android:onClick="BuiltInTaskModels"
         android:text="use a built in task model"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnseetasks"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent" />
