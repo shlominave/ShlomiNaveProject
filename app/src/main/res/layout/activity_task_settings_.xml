@@ -11,30 +11,23 @@
         android:layout_width="402dp"
         android:layout_height="87dp"
         android:layout_marginTop="28dp"
-        android:text="change the settings of an existing task or set initial setting for a new task"
+        android:text="change the settings of an existing task "
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/SettingsList"
-        android:layout_width="325dp"
-        android:layout_height="186dp"
-        android:layout_marginBottom="56dp"
+        android:layout_width="352dp"
+        android:layout_height="540dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <GridView
-        android:id="@+id/ExistingTaskGridView"
-        android:layout_width="310dp"
-        android:layout_height="215dp"
-        android:layout_marginTop="96dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

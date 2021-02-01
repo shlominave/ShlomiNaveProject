@@ -1,0 +1,42 @@
+package com.example.shlominaveproject;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+
+
+    public class YourAdapter extends ArrayAdapter<Task> {
+        private Context c;
+        private int resource;
+        private ArrayList<Task> objects;
+
+        public YourAdapter( Context context, int resource, ArrayList<Task>Objects) {
+            super(context, resource, Objects);
+            this.c=context;
+            this.resource=resource;
+            this.objects=Objects;
+        }
+
+        public int getCount() {
+            return this.objects.size();
+        }
+        public View getView(int position, View convertView, ViewGroup parent) {
+            LayoutInflater li=(LayoutInflater)this.c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View v =li.inflate(this.resource, null);
+            Task t=this.objects.get(position);
+            TextView description=v.findViewById(R.id.tvdescripition);
+            description.setText(String.valueOf(t.getDescription()));
+            Button taskinfo=v.findViewById(R.id.btntaskinfo);
+            taskinfo.setText("kkikjjji");
+
+
+            return v;
+        }
+    }
+

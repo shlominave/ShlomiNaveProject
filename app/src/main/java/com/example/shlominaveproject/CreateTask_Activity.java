@@ -13,10 +13,7 @@ public class CreateTask_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_task_);
     }
-    public void BuiltInTaskModels(View view) {
-        Intent i=new Intent(this,BuiltInTaskModels_Activity.class);
-        startActivity(i);
-    }
+
     public void SetTaskSettings(View view) {
         Intent i=new Intent(this,TaskSettings_Activity.class);
         startActivity(i);

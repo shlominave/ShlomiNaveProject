@@ -10,8 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Register"></activity>
-        <activity android:name=".BuiltInTaskModels_Activity" />
-        <activity android:name=".SubmitTask_Activity" />
         <activity android:name=".TaskSettings_Activity" />
         <activity android:name=".EditTask_Activity" />
         <activity android:name=".CheckEmployeeTasks_Activity" />
