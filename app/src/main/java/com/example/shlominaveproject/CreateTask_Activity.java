@@ -14,8 +14,8 @@ public class CreateTask_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_create_task_);
     }
 
-    public void SetTaskSettings(View view) {
-        Intent i=new Intent(this,TaskSettings_Activity.class);
+    public void Seetasks(View view) {
+        Intent i=new Intent(this,YourTasks_Activity.class);
         startActivity(i);
     }
     // public void Homepage(View view) {

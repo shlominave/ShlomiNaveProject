@@ -32,8 +32,8 @@ import java.util.ArrayList;
             Task t=this.objects.get(position);
             TextView description=v.findViewById(R.id.tvdescripition);
             description.setText(String.valueOf(t.getDescription()));
-            Button taskinfo=v.findViewById(R.id.btntaskinfo);
-            taskinfo.setText("kkikjjji");
+           TextView taskinfo=v.findViewById(R.id.tvtaskinfo);
+            taskinfo.setText(t.toString());
 
 
             return v;

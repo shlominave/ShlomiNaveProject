@@ -19,25 +19,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnsettings"
-        android:layout_width="268dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="52dp"
-        android:onClick="SetTaskSettings"
-        android:text="set setting for your new task"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnsettings2" />
-
-    <Button
         android:id="@+id/btnsettings2"
         android:layout_width="268dp"
         android:layout_height="45dp"
-        android:layout_marginTop="444dp"
+        android:layout_marginBottom="24dp"
+        android:onClick="Seetasks"
         android:text="confirm new task"
+        app:layout_constraintBottom_toTopOf="@+id/btnseetasks"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnseetasks"
+        android:layout_width="268dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="32dp"
+        android:onClick="Seetasks"
+        android:text="Click here to see your existing tasks"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

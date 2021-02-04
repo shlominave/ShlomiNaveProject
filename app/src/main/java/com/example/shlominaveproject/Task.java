@@ -87,10 +87,9 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Task{" +
-                "deadline='" + deadline + '\'' +
+        return
+                "deadline:'" + deadline + '\'' +
                 ", completed=" + completed +
-                ", id=" + id +
-                '}';
+                ", This task's task id is:" + id ;
     }
 }

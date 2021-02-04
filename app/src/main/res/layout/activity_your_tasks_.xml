@@ -7,26 +7,15 @@
     tools:context=".YourTasks_Activity">
 
     <Button
-        android:id="@+id/btnedit"
-        android:layout_width="221dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="48dp"
-        android:onClick="EditTask"
-        android:text="Edit your task"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/YourTasksGridView" />
-
-    <Button
         android:id="@+id/btncreatenewtask"
         android:layout_width="221dp"
         android:layout_height="64dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="44dp"
         android:onClick="Createnewtask"
         android:text="create a new task"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnedit" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvYourTasks"
@@ -41,12 +30,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <GridView
-        android:id="@+id/YourTasksGridView"
-        android:layout_width="356dp"
-        android:layout_height="320dp"
-        android:layout_marginTop="44dp"
+    <ListView
+        android:id="@+id/mytaskslist"
+        android:layout_width="418dp"
+        android:layout_height="434dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/btncreatenewtask"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvYourTasks" />
+        app:layout_constraintTop_toBottomOf="@+id/tvYourTasks"
+        app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
