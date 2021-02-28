@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
@@ -13,6 +14,9 @@ public class Register extends AppCompatActivity {
     private EditText email;
     private EditText pass;
     private EditText code;
+    Switch s1;
+    Switch s2;
+    Switch s3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,10 +25,27 @@ public class Register extends AppCompatActivity {
         email=findViewById(R.id.tvemail);
         pass=findViewById(R.id.editTextTextPassword);
         code=findViewById(R.id.ETcode);
+        s1=findViewById(R.id.switchIND);
+        s2=findViewById(R.id.switchEMPLOYEE);
+        s3=findViewById(R.id.switchMANAGER);
+    }
+    public void switchchange(View V) {
+        if (V == s3) {
+            s1.setChecked(false);
+            s2.setChecked(false);
+        } else if(V==s2)
+        {
+            s1.setChecked(false);
+            s3.setChecked(false);
+        }
+        else {
+            s2.setChecked(false);
+            s3.setChecked(false);
+        }
     }
     public void infobtn(View v)
     {
-        Toast.makeText(this,"Enter the code given to you, if this does not concern you leave this field empty",Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Enter the code given to you, independent users-leave this field empty",Toast.LENGTH_LONG).show();
     }
     public void RegisterToast(View v){
 

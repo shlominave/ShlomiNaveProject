@@ -93,13 +93,13 @@
         android:id="@+id/etcode"
         android:layout_width="218dp"
         android:layout_height="39dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="enter code:"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/switchMANAGER" />
 
     <Button
         android:id="@+id/codeinfobtn"
@@ -113,5 +113,42 @@
         android:textColor="#EFEFEF"
         app:layout_constraintStart_toEndOf="@+id/etcode"
         app:layout_constraintTop_toTopOf="@+id/etcode" />
+
+    <Switch
+        android:id="@+id/switchIND"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:checked="false"
+        android:onClick="switchchange"
+        android:text="INDEPENDENT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Switch
+        android:id="@+id/switchEMPLOYEE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:checked="false"
+        android:onClick="switchchange"
+        android:text="EMPLOYEE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchIND"
+        tools:checked="false" />
+
+    <Switch
+        android:id="@+id/switchMANAGER"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:onClick="switchchange"
+        android:showText="false"
+        android:text="MANAGER"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchEMPLOYEE" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

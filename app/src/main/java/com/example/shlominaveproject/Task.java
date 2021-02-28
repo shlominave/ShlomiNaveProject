@@ -9,7 +9,7 @@ public class Task {
     private String deadline;
 //    private SeekBar progress=null;
     public boolean completed=false;
-    private int id;
+   private int id=1;
 
 //    public Task(String description, String deadline, SeekBar progress, int id) {
 //        this.description = description;

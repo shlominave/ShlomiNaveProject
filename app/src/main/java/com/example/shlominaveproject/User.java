@@ -41,7 +41,17 @@ public class User {
         return usertype;
     }
 
-    public void setUsertype(String usertypename) {
-        this.usertype = usertypename;
+//    public void setUsertype(String usertypename) {
+//        this.usertype = usertypename;
+//    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", pass='" + pass + '\'' +
+                ", usertype='" + usertype + '\'' +
+                '}';
     }
 }
