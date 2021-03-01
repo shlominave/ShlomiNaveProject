@@ -18,11 +18,22 @@
     <TextView
         android:id="@+id/tvtaskinfo"
         android:layout_width="130dp"
-        android:layout_height="120dp"
+        android:layout_height="129dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.659"
         app:layout_constraintStart_toEndOf="@+id/tvdescripition"
         app:layout_constraintTop_toTopOf="@+id/tvdescripition" />
+
+    <Button
+        android:id="@+id/BTNEDIT"
+        android:layout_width="142dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:onClick="EditTask"
+        android:text="EDIT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvdescripition" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

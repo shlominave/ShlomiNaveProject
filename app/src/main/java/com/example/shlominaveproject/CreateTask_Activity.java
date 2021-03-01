@@ -22,7 +22,10 @@ public class CreateTask_Activity extends AppCompatActivity {
         deadlinetime=findViewById(R.id.ETdeadlinetime);
        ETid=findViewById(R.id.ETid);
     }
-
+    public void EditTask(View view) {
+        Intent i=new Intent(this,EditTask_Activity.class);
+        startActivity(i);
+    }
     public void Seetasks(View view) {
        if(des.getText().length()==0 || deadlinetime.getText().length()==0 || deadlinedate.getText().length()==0 ||ETid.getText().length()==0 )
        {
@@ -32,11 +35,13 @@ public class CreateTask_Activity extends AppCompatActivity {
            Toast.makeText(this,"correct date input is: DD/MM/YYYY",Toast.LENGTH_SHORT).show();
        else if(deadlinetime.length()!=4)
            Toast.makeText(this,"correct time input is: XX:XX",Toast.LENGTH_SHORT).show();
-       else 
+       else {
+
+       }
+           }
     }
 
     // public void Homepage(View view) {
     //    Intent i=new Intent(this,MainActivity.class);
     //      startActivity(i);
     // }פעולת מעבר לדף הבית
-}

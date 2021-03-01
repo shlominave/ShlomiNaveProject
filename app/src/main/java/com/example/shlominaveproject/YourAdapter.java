@@ -1,6 +1,7 @@
 package com.example.shlominaveproject;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,9 +35,11 @@ import java.util.ArrayList;
             description.setText(String.valueOf(t.getDescription()));
            TextView taskinfo=v.findViewById(R.id.tvtaskinfo);
             taskinfo.setText(t.toString());
+            Button EDITBUTTON=v.findViewById(R.id.BTNEDIT);
 
 
             return v;
         }
+
     }
 
