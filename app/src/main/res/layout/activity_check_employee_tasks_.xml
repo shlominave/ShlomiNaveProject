@@ -18,23 +18,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/buttonTaskSettings"
-        android:layout_width="303dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="16dp"
-        android:onClick="SetTaskSettings"
-        android:text="set new settings for resent task"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <ListView
         android:id="@+id/ReturnedTasksList"
-        android:layout_width="341dp"
-        android:layout_height="469dp"
+        android:layout_width="345dp"
+        android:layout_height="496dp"
         android:layout_marginTop="60dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonTaskSettings"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvcheckemployeetasks" />

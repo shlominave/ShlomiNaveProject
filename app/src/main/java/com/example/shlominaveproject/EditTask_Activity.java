@@ -25,9 +25,9 @@ public class EditTask_Activity extends AppCompatActivity {
         {
             Toast.makeText(this,"enter values to all areas",Toast.LENGTH_SHORT).show();
         }
-        else if(deadlinedate.length()!=10)
+        else if(deadlinedate.length()>7)
             Toast.makeText(this,"correct date input is: DD/MM/YYYY",Toast.LENGTH_SHORT).show();
-        else if(deadlinetime.length()!=4)
+        else if(deadlinetime.length()!=5)
             Toast.makeText(this,"correct time input is: XX:XX",Toast.LENGTH_SHORT).show();
         else {
 

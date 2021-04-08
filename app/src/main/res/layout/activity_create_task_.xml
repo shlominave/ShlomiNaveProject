@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -22,42 +23,41 @@
         android:id="@+id/btnsettings2"
         android:layout_width="268dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginTop="32dp"
         android:onClick="Seetasks"
         android:text="confirm new task"
-        app:layout_constraintBottom_toTopOf="@+id/btnseetasks"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.447"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ETid" />
 
     <Button
         android:id="@+id/btnseetasks"
         android:layout_width="268dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="64dp"
-        android:onClick="Seetasks"
-        android:text="Click here to see your existing tasks"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="24dp"
+        android:onClick="YOURTASKS"
+        android:text="Click here to see your  tasks"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnsettings2" />
 
     <EditText
         android:id="@+id/ETdescription"
         android:layout_width="332dp"
         android:layout_height="65dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:hint="enter description for your task:"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
         android:id="@+id/ETdeadlinedate"
-        android:layout_width="252dp"
-        android:layout_height="62dp"
+        android:layout_width="262dp"
+        android:layout_height="67dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="deadline date"
@@ -68,8 +68,8 @@
 
     <EditText
         android:id="@+id/ETdeadlinetime"
-        android:layout_width="252dp"
-        android:layout_height="62dp"
+        android:layout_width="258dp"
+        android:layout_height="60dp"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="deadline time"
@@ -82,11 +82,12 @@
         android:id="@+id/ETid"
         android:layout_width="252dp"
         android:layout_height="62dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="enter id"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.402"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ETdeadlinetime" />
 

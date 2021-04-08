@@ -10,12 +10,15 @@
         android:id="@+id/btncreatenewtask"
         android:layout_width="221dp"
         android:layout_height="64dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
         android:onClick="Createnewtask"
         android:text="create a new task"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mytaskslist"
+        app:layout_constraintVertical_bias="0.508" />
 
     <TextView
         android:id="@+id/tvYourTasks"
@@ -32,14 +35,11 @@
 
     <ListView
         android:id="@+id/mytaskslist"
-        android:layout_width="418dp"
-        android:layout_height="434dp"
-        android:layout_marginTop="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/btncreatenewtask"
+        android:layout_width="398dp"
+        android:layout_height="452dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvYourTasks"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/tvYourTasks" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
