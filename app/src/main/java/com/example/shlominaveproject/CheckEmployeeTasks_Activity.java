@@ -51,13 +51,13 @@ public class CheckEmployeeTasks_Activity extends AppCompatActivity {
     public void getdata()
     {
 
-        Task t=new Task("fly to the moon","24/5/2054" ,1);
+        Task t=new Task("fly to the moon","24/5/2054" );
         tasklist.add(t);
-        t=new Task("cure altzheimer","2/5/2047" ,2);
+        t=new Task("cure altzheimer","2/5/2047" );
         tasklist.add(t);
-        t=new Task("create a new language","2/10/2039" ,3);
+        t=new Task("create a new language","2/10/2039" );
         tasklist.add(t);
-        t=new Task("IDK","TOMORROW",4);
+        t=new Task("IDK","TOMORROW");
         tasklist.add(t);
 
 

@@ -8,8 +8,8 @@ public class Task {
     private String description;
     private String deadline;
 //    private SeekBar progress=null;
-    public boolean completed=false;
-   private int id=1;
+
+
 
 //    public Task(String description, String deadline, SeekBar progress, int id) {
 //        this.description = description;
@@ -19,11 +19,15 @@ public class Task {
 //        this.id=id;
 //    }
 
-    public Task(String description, String deadline,int id) {
+    public Task(String description, String deadline) {
         this.description = description;
         this.deadline = deadline;
-        this.completed = false;
-        this.id=id;
+
+
+    }
+    public Task()
+    {
+
     }
 
 //    public Task(String description, SeekBar progress, int id) {
@@ -57,21 +61,8 @@ public class Task {
 //        this.progress = progress;
 //    }
 
-    public boolean isCompleted() {
-        return completed;
-    }
 
-    public void setCompleted(boolean completed) {
-        this.completed = completed;
-    }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
 //    @Override
 //    public String toString() {
@@ -88,8 +79,7 @@ public class Task {
     @Override
     public String toString() {
         return
-                "deadline:'" + deadline + '\'' +
-                ", completed=" + completed +
-                ", This task's task id is:" + id ;
+                "deadline:'" + deadline + '\'' ;
+
     }
 }

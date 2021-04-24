@@ -5,30 +5,42 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class YourTasks_Activity extends AppCompatActivity {
     private ListView ListView;
-
     private ArrayList<Task> tasklist ;
+
     private YourAdapter ad;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_your_tasks_);
         ListView=findViewById(R.id.mytaskslist);
-        tasklist =new ArrayList<Task>();
-        getdata();
-        YourAdapter adapter=new YourAdapter(this,R.layout.task_layout,tasklist);
-        ListView.setAdapter(adapter);
-    }
+//        ListView.setOnItemClickListener(YourTaskslistener);
+        Dal dal=new Dal(this);
+        tasklist =dal.getAllTasks();
 
-    public void EditTask(View view) {
-        Intent i=new Intent(this,EditTask_Activity.class);
-        startActivity(i);
+        YourAdapter ad=new YourAdapter(this,R.layout.task_layout,tasklist);
+        ListView.setAdapter(ad);
+
     }
+//    private ListView.OnItemClickListener YourTaskslistener=new ListView.OnItemClickListener() {
+//        @Override
+//        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//            Intent i=new Intent();
+//            i.putExtra("key1",tasklist.get(position).getDescription());
+//            i.putExtra("key")
+//        }
+//    };
+
     public void Createnewtask(View view) {
         Intent i=new Intent(this,CreateTask_Activity.class);
         startActivity(i);
@@ -36,12 +48,7 @@ public class YourTasks_Activity extends AppCompatActivity {
     public void getdata()
     {
 
-        Task t=new Task("implement the new intent methods","by next monday" ,1);
-        tasklist.add(t);
-        t=new Task("review task class parameters","by the end of next week" ,2);
-        tasklist.add(t);
-        t=new Task("finish create a task page","in a week" ,3);
-        tasklist.add(t);
+
 
 
 
