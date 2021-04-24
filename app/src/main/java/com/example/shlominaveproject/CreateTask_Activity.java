@@ -39,6 +39,8 @@ public class CreateTask_Activity extends AppCompatActivity {
        else if(deadlinetime.length()!=5)
            Toast.makeText(this,"correct time input is: XX:XX",Toast.LENGTH_SHORT).show();
        else {
+           Dal d=new Dal(this);
+           d.addContact(des.getText().toString(),deadlinetime.getText().toString());
            Intent i=new Intent(this,YourTasks_Activity.class);
         startActivity(i);
        }
