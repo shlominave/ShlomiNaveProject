@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.ArrayList;
 public class YourTasks_Activity extends AppCompatActivity {
     private ListView ListView;
     private ArrayList<Task> tasklist ;
+    private TextView tv;
 
     private YourAdapter ad;
 
@@ -23,10 +25,12 @@ public class YourTasks_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_your_tasks_);
+        tv=findViewById(R.id.tvYourTasks);
         ListView=findViewById(R.id.mytaskslist);
 //        ListView.setOnItemClickListener(YourTaskslistener);
         Dal dal=new Dal(this);
         tasklist =dal.getAllTasks();
+        tv.append(":You have "+tasklist.size()+ " tasks left" );
 
         YourAdapter ad=new YourAdapter(this,R.layout.task_layout,tasklist);
         ListView.setAdapter(ad);

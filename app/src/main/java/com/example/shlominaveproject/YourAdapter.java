@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -31,10 +32,12 @@ import java.util.ArrayList;
             LayoutInflater li=(LayoutInflater)this.c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View v =li.inflate(this.resource, null);
             Task t=this.objects.get(position);
+            Button btndone=v.findViewById(R.id.btncomplete);
             TextView description=v.findViewById(R.id.tvdescripition);
             description.setText(String.valueOf(t.getDescription()));
            TextView taskinfo=v.findViewById(R.id.tvtaskinfo);
             taskinfo.setText(t.toString());
+            ImageView iv=v.findViewById(R.id.imageView2);
 
 
 
