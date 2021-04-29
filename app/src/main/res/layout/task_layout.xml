@@ -9,8 +9,8 @@
     <TextView
         android:id="@+id/tvdescripition"
         style="@style/Widget.AppCompat.TextView.SpinnerItem"
-        android:layout_width="174dp"
-        android:layout_height="61dp"
+        android:layout_width="171dp"
+        android:layout_height="77dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="16dp"
         android:clickable="true"
@@ -24,7 +24,7 @@
         android:layout_width="168dp"
         android:layout_height="46dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:clickable="true"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/tvdescripition" />
@@ -42,7 +42,7 @@
         android:id="@+id/btncomplete"
         android:layout_width="131dp"
         android:layout_height="53dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="60dp"
         android:text="DONE"
         app:layout_constraintEnd_toEndOf="parent"
