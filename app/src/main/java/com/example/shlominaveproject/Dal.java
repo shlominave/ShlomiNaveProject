@@ -16,7 +16,7 @@ public class Dal extends SQLiteAssetHelper {
     }
 
     public void addContact(String description, String deadline) {
-
+//String st="SELECT * FROM tasks WHERE description=="+description+ " AND deadline==" +deadline+"'";
 String s="select * from tasks";
         SQLiteDatabase db = getWritableDatabase();
         String sql_INSERT = "INSERT INTO tasks (description,deadline) values(?,?)";
