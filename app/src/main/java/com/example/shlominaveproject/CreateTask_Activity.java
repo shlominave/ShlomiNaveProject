@@ -13,7 +13,7 @@ public class CreateTask_Activity extends AppCompatActivity {
         EditText des;
         EditText deadlinedate;
         EditText deadlinetime;
-        EditText ETid;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class CreateTask_Activity extends AppCompatActivity {
         des=findViewById(R.id.ETdescription);
         deadlinedate=findViewById(R.id.ETdeadlinedate);
         deadlinetime=findViewById(R.id.ETdeadlinetime);
-       ETid=findViewById(R.id.ETid);
+
     }
 //    public void EditTask(View view) {
 //        Intent i=new Intent(this,EditTask_Activity.class);
@@ -30,7 +30,7 @@ public class CreateTask_Activity extends AppCompatActivity {
 //    }
     public void Seetasks(View view) {
 
-       if(des.getText().length()==0 || deadlinetime.getText().length()==0 || deadlinedate.getText().length()==0 ||ETid.getText().length()==0 )
+       if(des.getText().length()==0 || deadlinetime.getText().length()==0 || deadlinedate.getText().length()==0  )
        {
            Toast.makeText(this,"enter values to all areas",Toast.LENGTH_SHORT).show();
        }
@@ -40,7 +40,7 @@ public class CreateTask_Activity extends AppCompatActivity {
            Toast.makeText(this,"correct time input is: XX:XX",Toast.LENGTH_SHORT).show();
        else {
            Dal d=new Dal(this);
-           d.addContact(des.getText().toString(),deadlinetime.getText().toString());
+           d.addtask(des.getText().toString(),deadlinetime.getText().toString());
            Intent i=new Intent(this,YourTasks_Activity.class);
         startActivity(i);
        }

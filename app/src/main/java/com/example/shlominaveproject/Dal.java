@@ -4,7 +4,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
-
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 import java.util.ArrayList;
@@ -14,8 +13,13 @@ public class Dal extends SQLiteAssetHelper {
 
         super(context, "shlomiprojects_DB.db", null, 1);
     }
-
-    public void addContact(String description, String deadline) {
+    public void deletetask(String description, String deadline) {
+//String st="UPDATE tasks WHERE description=="+description+ " AND deadline==" +deadline+"'";
+        String s="select * from tasks";
+        SQLiteDatabase db = getWritableDatabase();
+        String sql_delete="DELETE from tasks WHERE description=="+description+ " AND deadline==" +deadline+"'";
+    }
+    public void addtask(String description, String deadline) {
 //String st="SELECT * FROM tasks WHERE description=="+description+ " AND deadline==" +deadline+"'";
 String s="select * from tasks";
         SQLiteDatabase db = getWritableDatabase();
@@ -25,6 +29,26 @@ String s="select * from tasks";
         statement.bindString(1, description);
         statement.bindString(2, deadline);
         statement.execute();
+    }
+    public void adduser(String username,String email, String password, Boolean b1,boolean b2, boolean b3, String code) {
+//String st="SELECT * FROM tasks WHERE description=="+description+ " AND deadline==" +deadline+"'";
+        String s="select * from tasks";
+        SQLiteDatabase db = getWritableDatabase();
+        String usertype;
+        if(b1){
+            usertype="independent";
+        }
+        else if(b2)
+        {
+            usertype="employee";
+        }
+        else usertype="manager";
+//        String sql_INSERT = "INSERT INTO users (description,deadline) values(?,?)";
+//        SQLiteStatement statement = db.compileStatement(sql_INSERT);
+//
+//        statement.bindString(1, description);
+//        statement.bindString(2, deadline);
+//        statement.execute();
     }
     public ArrayList<Task> getAllTasks() {
         ArrayList<Task> ary = new ArrayList<>();

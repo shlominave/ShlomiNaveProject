@@ -73,6 +73,8 @@ public class Register extends AppCompatActivity {
                 Intent i = new Intent(this, CreateTask_Activity.class);
                 startActivity(i);
             } else {
+                Dal d=new Dal(this);
+                d.adduser(username.getText().toString(),email.getText().toString(),pass.getText().toString(),s1.isChecked(),s2.isChecked(),s3.isChecked(),code.getText().toString());
                 Intent i = new Intent(this, CheckEmployeeTasks_Activity.class);
                 startActivity(i);
             }
